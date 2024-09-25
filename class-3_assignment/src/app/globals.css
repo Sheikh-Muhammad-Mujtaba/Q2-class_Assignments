@@ -1,0 +1,302 @@
+/* Base Styles */
+body {
+  background-color: #d7d7d7;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #d7d7d7;
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  transition: all 0.5s ease;
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  padding: 5vw;
+  max-width: 50%;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.text-container {
+  align-items: center;
+  text-align: left;
+  width: 90%;
+}
+
+.intro-text {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #919191;
+  margin-bottom: 2rem;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  width: clamp(40px, 5vw, 50px);
+  height: clamp(40px, 5vw, 50px);
+  background: #c4c4c4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  width: 60%;
+  height: 60%;
+  fill: #000000;
+}
+
+/* Image Section */
+.image-container {
+  position: absolute;
+  height: 140%;
+  right: -20%;
+  top: -20%;
+  width: 70%;
+  transform: rotate(9.67deg);
+  background: #000000;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.profile-image {
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  top: 10%;
+  left: -10%;
+  transform: rotate(-9.67deg);
+  object-fit: contain;
+}
+
+.header {
+  height: 66px; 
+  background: #0b0b0b;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-button {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.header-button-item {
+  width: 147px;
+  height: 46px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-button-item:hover {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 850px) {
+  /* Full-Height Image Container */
+  .image-container {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: none;
+    z-index: 1;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: none;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* Content Overlay */
+  .content {
+    position: absolute;
+    top: clamp(18%, 28vw, 40%);
+    left: clamp(18%, 28vw, 38%);
+    width: clamp(100%, 115vw, 130%);
+    height: clamp(100%, 135vh, 185%);
+    background: rgba(59, 59, 59, 0.56);
+    transform: rotate(-102.12deg);
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  /* Text Container */
+  .text-container {
+    position: absolute;
+    top: clamp(30%, 40vw, 60%);
+    left: clamp(10%, 15vw, 20%);
+    text-align: left;
+    transform: rotate(102.12deg);
+    padding-left: clamp(0.5rem, 1vm, 1rem);
+    color: #ffffff;
+  }
+
+  .intro-text {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-weight: 700;
+    margin: -2px;
+    color: #ffffff;
+  }
+
+  .name {
+    font-size: clamp(2rem, 5.5vw, 2.5rem);
+    font-weight: 700;
+    margin: -2px;
+    color: #ffffff;
+  }
+
+  .title {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 800;
+    margin: -2px;
+    color: #ffffff;
+  }
+
+  /* Icons */
+  .icons {
+    position: absolute;
+    top: clamp(60%, 65vw, 75%);
+    left: clamp(40%, 45vw, 50%);
+    transform: rotate(102.12deg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon {
+    margin: clamp(0.6rem, 1.1vw, 1rem);
+    width: clamp(35px, 7vw, 45px);
+    height: clamp(35px, 7vw, 45px);
+    background-color: rgba(70, 69, 69, 0.486);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .icon svg {
+    width: 70%;
+    height: 70%;
+    fill: #ffffff; /* White icons */
+  }
+}
+
+/* Additional media query for screens smaller than 620px */
+@media screen and (max-width: 620px) {
+  .content {
+    top: clamp(23%, 25vw, 40%);
+  }
+
+  .text-container {
+    top: clamp(38%, 45vw, 70%);
+    left: clamp(10%, 15vw, 20%);
+  }
+
+  .intro-text {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .name {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .title {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .icons {
+    top: clamp(58%, 65vw, 65%);
+    left: clamp(30%, 35vw, 40%);
+  }
+
+  .icon {
+    width: clamp(30px, 6vw, 40px);
+    height: clamp(30px, 6vw, 40px);
+  }
+}
+
+/* Additional media query for screens smaller than 450px */
+@media screen and (max-width: 450px) {
+  .content {
+    top: clamp(23%, 25vw, 40%);
+  }
+
+  .text-container {
+    top: clamp(40%, 50vw, 70%);
+    left: clamp(10%, 15vw, 20%);
+  }
+
+  .icons {
+    top: clamp(50%, 60vw, 70%);
+    left: clamp(30%, 35vw, 40%);
+  }
+}

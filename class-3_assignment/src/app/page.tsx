@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "@/app/components/Nav_bar";
+import About from './about/page';
 
 export default function Home() {
   return (
     <>
       <header><Header /></header>
       <div className="container">
-        <div className="image-container">
+        <div className="image-container mt-8">
        
           <img
             src="/images/profile-image.png"
@@ -53,6 +54,10 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </div>
+      <hr className="border border-black"/>
+      <div>
+      <About />
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "@/app/components/Nav_bar";
-import About from './about/page';
+import ContactSection from './components/Contact';
+import AboutSection from "./components/About_Section";
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -57,8 +59,12 @@ export default function Home() {
       </div>
       <hr className="border border-black"/>
       <div>
-      <About />
+      <AboutSection />
       </div>
+      <div>
+        <ContactSection />
+      </div>
+      <footer><Footer /></footer>
     </>
   );
 }

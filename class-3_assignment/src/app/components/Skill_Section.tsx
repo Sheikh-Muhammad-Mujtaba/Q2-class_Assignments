@@ -1,5 +1,8 @@
 "use client"
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
+import Image from 'next/image';
 
 export default function SkillSection() {
   return (
@@ -7,7 +10,7 @@ export default function SkillSection() {
       <section >
         {/* Skills Section */}
         <div className="flex flex-col items-center text-center  space-y-12">
-          <img
+          <Image
             src="/images/image.png"
             alt="svg"
             className="w-32 h-32 object-contain"

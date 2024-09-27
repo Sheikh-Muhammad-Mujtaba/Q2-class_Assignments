@@ -3,6 +3,7 @@ import Header from "@/app/components/Nav_bar";
 import ContactSection from './components/Contact';
 import AboutSection from "./components/About_Section";
 import Footer from './components/Footer';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="container">
         <div className="image-container mt-8">
        
-          <img
+          <Image
             src="/images/profile-image.png"
             alt="Profile Picture"
             className="profile-image"

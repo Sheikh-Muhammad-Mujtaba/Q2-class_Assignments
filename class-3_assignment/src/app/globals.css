@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Base Styles */
 body {
   background-color: #d7d7d7;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -107,47 +112,6 @@ body {
   object-fit: contain;
 }
 
-.header {
-  height: 66px; 
-  background: #0b0b0b;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.header-button {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style: none;
-  padding: 12px;
-  margin: 0;
-  text-align: center;
-}
-
-.header-button-item {
-  width: 147px;
-  height: 46px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 21px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.header-button-item:hover {
-  background-color: #ffffff;
-  color: #000000;
-  cursor: pointer;
-  border-radius: 50px;
-}
 
 /* Responsive Design */
 @media screen and (max-width: 850px) {

@@ -1,11 +1,21 @@
+import AboutSection from "../components/About_Section";
+import SkillSection from "../components/Skill_Section";
 import Header from "../components/Nav_bar";
+import React from "react";
+import Footer from "../components/Footer";
 
 export default function About() {
-    return (
-        <div className="about">
-            <div><Header /></div>
-           <h1>this is about page</h1>
-        </div>
-    );
-    
+  return (
+    <main className="flex min-h-screen flex-col">
+      <Header />
+      <div className=" mt-4 mx-auto px-12 py-4 mb-10">
+        <AboutSection />
+      </div>
+      {/* Skills Section */}
+      <div>
+        <SkillSection />
+      </div>
+      <footer><Footer /></footer>
+    </main>
+  );
 }

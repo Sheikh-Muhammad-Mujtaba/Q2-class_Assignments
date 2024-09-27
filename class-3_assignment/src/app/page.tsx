@@ -1,12 +1,15 @@
 import React from "react";
 import Header from "@/app/components/Nav_bar";
+import ContactSection from './components/Contact';
+import AboutSection from "./components/About_Section";
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
     <>
       <header><Header /></header>
       <div className="container">
-        <div className="image-container">
+        <div className="image-container mt-8">
        
           <img
             src="/images/profile-image.png"
@@ -54,6 +57,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <hr className="border border-black"/>
+      <div>
+      <AboutSection />
+      </div>
+      <div>
+        <ContactSection />
+      </div>
+      <footer><Footer /></footer>
     </>
   );
 }

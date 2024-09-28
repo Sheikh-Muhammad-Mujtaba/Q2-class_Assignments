@@ -3,6 +3,7 @@ import Header from "@/app/components/Nav_bar";
 import ContactSection from './components/Contact';
 import AboutSection from "./components/About_Section";
 import Footer from './components/Footer';
+import SkillSection from "./components/Skill_Section";
 import Image from 'next/image';
 
 export default function Home() {
@@ -15,6 +16,8 @@ export default function Home() {
           <Image
             src="/images/profile-image.png"
             alt="Profile Picture"
+            width={500} 
+            height={600}
             className="profile-image"
           />
         </div>
@@ -61,6 +64,9 @@ export default function Home() {
       <hr className="border border-black"/>
       <div>
       <AboutSection />
+      </div>
+      <div>
+        <SkillSection />
       </div>
       <div>
         <ContactSection />

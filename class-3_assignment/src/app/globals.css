@@ -103,7 +103,7 @@ body {
 }
 
 .profile-image {
-  position: absolute;
+  position: absolute; 
   width: 80%;
   height: 90%;
   top: 10%;
@@ -117,7 +117,7 @@ body {
 @media screen and (max-width: 850px) {
   /* Full-Height Image Container */
   .image-container {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: auto;
     left: 0;

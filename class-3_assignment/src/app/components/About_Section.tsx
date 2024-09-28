@@ -23,7 +23,9 @@ export default function AboutSection() {
           <Image
             src="/images/image.png"
             alt="svg"
-            className="w-32 h-32 sm:w-36 sm:h-36 lg:w-32 lg:h-32 object-contain"
+            width={128}
+            height={128}
+            className="sm:w-36 sm:h-36 lg:w-32 lg:h-32 object-contain"
           />
         </div>
       </section>

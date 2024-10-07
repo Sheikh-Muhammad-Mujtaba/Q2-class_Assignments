@@ -12,7 +12,7 @@ export default function Post3() {
       <div className="max-w-7xl w-full bg-white shadow-md rounded-lg p-8">
         <div className="flex justify-center mb-6">
           <Image
-            src="/images/Artificial-intelligence.webp"
+            src="/images/Artificial-Intelligence.webp"
             alt="AI in Everyday Life Image"
             width={600}
             height={400}

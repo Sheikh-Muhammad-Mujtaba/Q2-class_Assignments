@@ -1,0 +1,84 @@
+/* Container for the entire blog page */
+.blog-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Alegreya", serif; /* Using Alegreya for blog text */
+    color: var(--dark-color);
+    line-height: 1.8;
+  }
+  
+  /* Header section */
+  .blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .blog-header h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 800; /* Bold for the title */
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+  }
+  
+  .blog-header .tag {
+    display: inline-block;
+    background-color: var(--pink-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  /* Content section */
+  .blog-content {
+    margin-bottom: 40px;
+  }
+  
+  .blog-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  /* Article content */
+  .blog-article h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--red-color);
+    margin-bottom: 15px;
+  }
+  
+  .blog-article p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Footer section */
+  .blog-footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .blog-footer a {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--yellow-color);
+    color: var(--dark-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .blog-footer a:hover {
+    background-color: var(--pink-color);
+    color: #fff;
+  }
+  

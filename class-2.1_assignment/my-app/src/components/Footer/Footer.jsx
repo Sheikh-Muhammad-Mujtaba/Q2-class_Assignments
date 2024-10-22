@@ -37,7 +37,7 @@ export default function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="#">Blog</a>
+                <a href="/all-blogs">Blog</a>
               </li>
 
               <li>
@@ -50,11 +50,11 @@ export default function Footer() {
             <h3>Contact Us</h3>
             <ul>
               <li>
-                <a href="#">contact@email.com</a>
+                <a href="mailto:contact@email.com">contact@email.com</a>
               </li>
 
               <li>
-                <a href="#">+1 999 9999 999</a>
+                <a href="tel:+19999999999">+1 999 9999 999</a>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import AboutSection from "./components/About_Section";
 import Footer from './components/Footer';
 import SkillSection from "./components/Skill_Section";
 import Image from 'next/image';
+import PortfolioSection from "./components/Projects";
 
 export default function Home() {
   return (
@@ -67,6 +68,9 @@ export default function Home() {
       </div>
       <div>
         <SkillSection />
+      </div>
+      <div>
+        <PortfolioSection />
       </div>
       <div>
         <ContactSection />

@@ -4,8 +4,8 @@
 import React from "react";
 import Image from 'next/image';
 import Link from "next/link";
-import Button from "./playbutton";
-import CodeButton from "./codeButton";
+import Button from "./UI/playbutton";
+import CodeButton from "./UI/codeButton";
 
 export default function PortfolioSection() {
   return (
@@ -117,19 +117,19 @@ export default function PortfolioSection() {
                 <Link href={"https://github.com/Sheikh-Muhammad-Mujtaba/My_projects/tree/main/cli_number_guessing_game"} target="_blank" rel="noopener noreferrer" ><CodeButton /></Link>
                 <Image src={"/images/Cli-game.png"} alt="Cli Game Image" width={500} height={500} className="w-full h-[70%] rounded-lg" />
                 <div className="flex flex-row justify-between m-4">
-                  <h1 className="text-[18px] sm:text-[24px] leading-[29px] text-left items-center font-bold flex tracking-[0.13538em] text-[#000000]">Random Number <br /> Guessing Game</h1>
+                  <h1 className="text-[18px] sm:text-[24px] sm:leading-[29px] text-left items-center font-bold flex tracking-[0.13538em] text-[#000000]">Number<br />Guessing Game</h1>
                   <Link href={"https://www.npmjs.com/package/cli-random-number-guessing-game"} target="_blank" rel="noopener noreferrer" className="flex h-[2em] mt-[10px]"><Button /></Link>
                 </div>
               </div>
 
 
-              {/* Countdown Timer */}
+              {/* ATM App */}
               <div className="relative w-[280px] sm:w-[400px] h-[300px] bg-white rounded-lg p-1 hover:shadow-md hover:shadow-slate-500 hover:scale-105 transition  duration-300">
-                <Link href={"https://github.com/Sheikh-Muhammad-Mujtaba/countdown_timer_nextjs"} target="_blank" rel="noopener noreferrer" ><CodeButton /></Link>
-                <Image src={"/images/countdown-timer.png"} alt="Countdown Timer Image" width={900} height={900} className="w-full h-[70%] rounded-lg" />
+                <Link href={"https://github.com/Sheikh-Muhammad-Mujtaba/My_projects/tree/main/Atm_Machine_App"} target="_blank" rel="noopener noreferrer" ><CodeButton /></Link>
+                <Image src={"/images/ATM-app.png"} alt="ATM App Image" width={900} height={900} className="w-full h-[70%] rounded-lg" />
                 <div className="flex flex-row justify-between m-4">
-                  <h1 className="text-[18px] sm:text-[24px] leading-[29px] text-left items-center font-bold flex tracking-[0.13538em] text-[#000000]">Countdown Timer</h1>
-                  <Link href={"https://countdown-timer-nextjs-sable.vercel.app/"} target="_blank" rel="noopener noreferrer" className="flex h-[2em] mt-[10px]"><Button /></Link>
+                  <h1 className="text-[18px] sm:text-[24px] leading-[29px] text-left items-center font-bold flex tracking-[0.13538em] text-[#000000]">ATM App</h1>
+                  <Link href={"https://www.npmjs.com/package/atm_machine_app"} target="_blank" rel="noopener noreferrer" className="flex h-[2em] mt-[10px]"><Button /></Link>
                 </div>
               </div>
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { FaGithub, FaEnvelope, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
-import BackToTopButton from "./BackToTopButton";
+import BackToTopButton from "./UI/BackToTopButton";
 
 
 
@@ -17,14 +17,14 @@ export default function Footer() {
             href="https://github.com/Sheikh-Muhammad-Mujtaba"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-110 hover:text-gray-400 text-gray-200 p-3 rounded-full"
+            className="transition-transform transform hover:scale-110 hover:text-black text-gray-200 p-3 rounded-full"
             style={{ fontSize: "2rem" }}
           >
             <FaGithub />
           </a>
           <a
             href="mailto:smujtabaja@gmail.com"
-            className="transition-transform transform hover:scale-110 hover:text-gray-400 text-gray-200 p-3 rounded-full"
+            className="transition-transform transform hover:scale-110 hover:text-blue-400 text-gray-200 p-3 rounded-full"
             style={{ fontSize: "2rem" }}
           >
             <FaEnvelope />

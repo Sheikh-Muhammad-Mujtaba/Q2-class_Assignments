@@ -23,7 +23,7 @@ export default function SkillSection() {
           <div className="w-[80%]">
             <h1 className="not-italic font-bold text-[30px] leading-[37px] flex items-center tracking-[0.18538em] text-[#000000] mb-[75px]">
               USING NOW:</h1>
-            <div className="flex flex-wrap gap-[156px] justify-center items-center mb-[5%]">
+            <div className="flex flex-wrap gap-[156px] justify-center items-center mb-[15%] sm:mb-[5%]">
 
 
               <div>
@@ -110,7 +110,7 @@ export default function SkillSection() {
             </div>
             <h1 className="not-italic font-bold text-[30px] leading-[37px] flex items-center tracking-[0.18538em] text-[#000000] mb-[75px]">
             LEARNING:</h1>
-            <div className="flex flex-wrap gap-[156px] justify-center items-center mb-[5%]">
+            <div className="flex flex-wrap gap-[156px] justify-center items-center mb-[15%] sm:mb-[5%]">
 
 <div>
 <svg width="100" height="100" viewBox="0 0 70 100" fill="none" xmlns="http://www.w3.org/2000/svg">

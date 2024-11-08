@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <main className="flex min-h-screen flex-col">
         <Header />
-        <div className=" mt-10 mx-auto px-4 py-4 mb-28 max-w-6xl w-full"> 
+        <div className="mt-10 py-4 mb-28"> 
           <ContactSection />
         </div>
         <footer><Footer /></footer>

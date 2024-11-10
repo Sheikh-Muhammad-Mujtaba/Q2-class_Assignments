@@ -32,7 +32,7 @@
 
 ## 🖥️ Demo
 
-[Live Demo](https://class-10_assignment.vercel.com) 
+[Live Demo](https://q2-class-assignments-7fc7.vercel.app/)
 
 ---
 

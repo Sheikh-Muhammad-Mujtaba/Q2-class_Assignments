@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useInView } from "./useInView"; // Adjust path as necessary
+import { useInView } from "./useInView";
 
 interface CoinCardProps {
   coin: string;

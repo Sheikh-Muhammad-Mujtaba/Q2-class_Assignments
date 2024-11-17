@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import DarkModeToggle from "@/components/ui/Darkmode-button";
+import BacktoHome from "@/components/ui/BacktoHome";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,13 +26,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
+         <div className="z-10 absolute top-5 sm:top-3 right-5 flex">
+        <DarkModeToggle />
+        </div>
+       <div className="bg-[#023047] dark:bg-[#219ebc]"> 
         {children}
+        </div>
+        <div className="fixed bottom-5 right-5">
+          <BacktoHome />
+        </div>
       </body>
     </html>
   );

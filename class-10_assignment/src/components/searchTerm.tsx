@@ -18,7 +18,7 @@ export default function SearchTerm({
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       placeholder={placeholder || "Search..."}
-      className="w-full mb-4 bg-gray-200 p-2 rounded shadow-sm"
+      className="w-full mb-4 bg-gray-200 p-2 rounded shadow-sm text-black"
     />
   );
 }

@@ -81,3 +81,10 @@ header .cta .demo-btn {
     font-size: 32px;
   }
 }
+
+@media (max-width : 380px) {
+  header .cta .demo-btn {
+    padding: 7px 32px;
+    font-size: 14px;
+  }
+}

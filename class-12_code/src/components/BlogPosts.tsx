@@ -5,8 +5,19 @@ export default async function BlogPosts() {
 
 const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-  let data = await (await fetch(`${baseURL}/blog`)).json();
-  
+let data;
+try {
+  const response = await fetch(`${baseURL}/blog`);
+  if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+  data = await response.json();
+} catch (error) {
+  console.error('Failed to fetch blog data:', error);
+  return (
+    <div className="flex flex-col items-center px-0 py-10">
+      <h1 className="text-[24px] font-semibold text-red-500">Failed to load blog posts</h1>
+    </div>
+  );
+}
 
   return (
     <div className="flex flex-col items-center px-0 py-[30px] gap-[64px] w-full min-h-[1183px] bg-[#FFFFFF] dark:bg-[#090D1F]">

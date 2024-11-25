@@ -28,7 +28,7 @@ export default async function BlogPosts() {
 
         <div className="flex flex-row flex-wrap items-center md:items-start p-0 gap-[48px] md:w-[88vw] min-h-[968px]">
           {data.map((blog: any, index: number) => (
-            <div key={index} className="flex flex-col items-start p-0 gap-[32px] max-w-[26.667vw] min-h-[444px]">
+            <div key={index} className="flex flex-col items-start p-0 gap-[32px] max-w-[384px] xl:max-w-[26.667vw] min-h-[444px]">
               <Image src={blog.image} alt={blog.title} width={500} height={500}
                 className="w-full h-[240px]"
               />

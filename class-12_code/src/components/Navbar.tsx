@@ -36,7 +36,7 @@ export default function Navbar() {
         } absolute md:static left-0 top-[80px] w-full md:max-w-[496px] flex-col md:flex-row md:flex justify-center md:justify-end items-center gap-[14px] bg-white dark:bg-[#090D1F] md:bg-transparent font-normal text-[20px] leading-[24px] text-[#1A1A1A] dark:text-white`}
       >
         <Link
-          href="#l1"
+          href="#"
           id="l1"
           onClick={() => handleClick("#l1")}
           className={`w-[fit-content] h-[24px] ${
@@ -48,7 +48,7 @@ export default function Navbar() {
           Blog
         </Link>
         <Link
-          href="#l2"
+          href="/projects"
           id="l2"
           onClick={() => handleClick("#l2")}
           className={`w-[fit-content] h-[24px] ${
@@ -60,7 +60,7 @@ export default function Navbar() {
           Projects
         </Link>
         <Link
-          href="#l3"
+          href="/about"
           id="l3"
           onClick={() => handleClick("#l3")}
           className={`w-[fit-content] h-[24px] ${
@@ -72,7 +72,7 @@ export default function Navbar() {
           About
         </Link>
         <Link
-          href="#l4"
+          href="/newsletter"
           id="l4"
           onClick={() => handleClick("#l4")}
           className={`w-[fit-content] h-[24px] ${

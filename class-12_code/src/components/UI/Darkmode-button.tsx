@@ -26,8 +26,8 @@ export default function DarkModeToggle() {
 
   return (
     <div className="relative group">
-      <div onClick={toggleDarkMode} className="flex flex-row items-start px-[16px] py-[8px] gap-[16px] w-[96px] h-[40px] bg-[#090D1F] dark:bg-[#FFFFFF] rounded-[29px] cursor-pointer">
-        <div className="absolute flex flex-row items-start p-0 gap-[10px] w-[24px] h-[24px] rounded-[20px] bg-[#FFFFFF] dark:bg-[#090D1F] translate-x-[40px] dark:translate-x-0 transform duration-300">
+      <div onClick={toggleDarkMode} className="flex flex-row items-start px-[8px] sm:px-[16px] py-[3px] sm:py-[8px] gap-[10px] sm:gap-[16px] w-[70px] sm:w-[96px] h-[30px] sm:h-[40px] bg-[#090D1F] dark:bg-[#FFFFFF] rounded-[29px] cursor-pointer">
+        <div className="absolute flex flex-row items-start p-0 gap-[10px] w-[24px] h-[24px] rounded-[20px] bg-[#FFFFFF] dark:bg-[#090D1F] translate-x-[30px] sm:translate-x-[40px] dark:translate-x-0 transform duration-300">
 
         </div>
 

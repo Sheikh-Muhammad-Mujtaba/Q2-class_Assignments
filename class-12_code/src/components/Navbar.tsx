@@ -33,7 +33,7 @@ export default function Navbar() {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } absolute md:static top-[80px] w-full md:max-w-[496px] flex-col md:flex-row md:flex justify-center md:justify-end items-center gap-[14px] font-normal text-[20px] leading-[24px] text-[#1A1A1A] dark:text-white`}
+        } absolute md:static left-0 top-[80px] w-full md:max-w-[496px] flex-col md:flex-row md:flex justify-center md:justify-end items-center gap-[14px] bg-white dark:bg-[#090D1F] md:bg-transparent font-normal text-[20px] leading-[24px] text-[#1A1A1A] dark:text-white`}
       >
         <Link
           href="#l1"

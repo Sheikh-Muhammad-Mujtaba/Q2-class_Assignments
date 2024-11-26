@@ -5,7 +5,7 @@ export const BLOG_DATA = [
         image: '/blog-images/post-1.png',
         title: "Bill Walsh leadership lessons",
         description: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
-        content: "",
+        link: "/post1",
         tags: [
             "Leadership",
             "Management"
@@ -17,7 +17,7 @@ export const BLOG_DATA = [
         image: '/blog-images/post-2.png',
         title: "PM mental models",
         description: "Mental models are simple expressions of complex processes or relationships.",
-        content: "",
+        link: "/post2",
         tags:[
             "Product",
             "Research",
@@ -30,7 +30,7 @@ export const BLOG_DATA = [
         image: '/blog-images/post-3.png',
         title: "What is Wireframing?",
         description: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
-        content: "",
+        link: "/post3",
         tags: [
             "Design",
             "Research"
@@ -42,7 +42,7 @@ export const BLOG_DATA = [
         image: '/blog-images/post-4.png',
         title: "How collaboration makes us better designers",
         description: "Collaboration can make our teams stronger, and our individual designs better.",
-        content: "",
+        link: "/post4",
         tags:[
             "Design",
             "Research"
@@ -54,7 +54,7 @@ export const BLOG_DATA = [
         image: '/blog-images/post-5.png',
         title: "Our top 10 Javascript frameworks to use",
         description: "JavaScript frameworks make development easy with extensive features and functionalities.",
-        content: "",
+        link: "/post5",
         tags:[
             "Software Development",
             "Tools",
@@ -67,10 +67,12 @@ export const BLOG_DATA = [
         image: '/blog-images/post-6.png',
         title: "Podcast: Creating a better CX Community",
         description: "Starting a community doesn’t need to be complicated, but how do you get started?",
-        content: "",
+        link: '/post6',
         tags:[
             "Podcasts",
             "Customer Success"
         ]
     }
 ]
+
+

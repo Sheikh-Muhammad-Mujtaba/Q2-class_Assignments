@@ -36,7 +36,7 @@ export default function Navbar() {
         } absolute md:static left-0 top-[80px] w-full md:max-w-[496px] flex-col md:flex-row md:flex justify-center md:justify-end items-center gap-[14px] bg-white dark:bg-[#090D1F] md:bg-transparent font-normal text-[20px] leading-[24px] text-[#1A1A1A] dark:text-white`}
       >
         <Link
-          href="#"
+          href="/#"
           id="l1"
           onClick={() => handleClick("#l1")}
           className={`w-[fit-content] h-[24px] ${

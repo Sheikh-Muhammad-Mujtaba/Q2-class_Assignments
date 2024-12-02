@@ -1,4 +1,4 @@
-import Banner from "@/components/Banner";
+import Banner from "@/components/Blog-pg-Banner";
 import BlogPosts from "@/components/BlogPosts";
 
 export default function Home() {

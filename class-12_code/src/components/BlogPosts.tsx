@@ -62,10 +62,13 @@ export default async function BlogPosts() {
                     Design: 'bg-[#F9F5FF] text-[#6941C6]',
                     Podcasts: 'bg-[#F9F5FF] text-[#6941C6]',
                     Research: 'bg-[#EEF4FF] text-[#3538CD]',
+                    Branding: 'bg-[#EEF4FF] text-[#3538CD]',
                     Frameworks: 'bg-[#FFF6ED] text-[#C4320A]',
                     Product: 'bg-[#F0F9FF] text-[#026AA2]',
                     Tools: 'bg-[#FDF2FA] text-[#C11574]',
                     SaaS: 'bg-[#FFF1F3] text-[#C01048]',
+                    Presentation: 'bg-[#FDF2FA] text-[#C11574]',
+                    Identity: 'bg-[#FDF2FA] text-[#C11574]',
                     'Software Development': 'bg-[#ECFDF3] text-[#027A48]',
                   };
 

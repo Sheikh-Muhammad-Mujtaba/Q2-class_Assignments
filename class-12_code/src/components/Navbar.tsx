@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import DarkModeToggle from "./UI/Darkmode-button";
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState("#l1");
+  const [activeLink, setActiveLink] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   const handleClick = (link: string) => {

@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='flex flex-col justify-center items-center text-[20px] font-semibold text-center dark:text-white'>
-      <div className="flex flex-col justify-start items-center px-0 py-[30px] gap-[50px] w-full max-h-[32.292vw] bg-[#FFFFFF] dark:bg-[#090D1F]">
+    <div className='flex flex-col justify-center items-center text-[20px] gap-[35px] font-semibold text-center dark:text-white'>
+      <div className="flex flex-col justify-center items-center px-0 py-[30px] gap-[50px] w-[90vw] h-[28vw] bg-[#FFFFFF] dark:bg-[#090D1F] border-y-2 border-gray-500">
 
         <h1 className="flex font-bold text-[16.931vw] text-center leading-7 lg:leading-[295px] text-[#1A1A1A] dark:text-white ">
           John Doe

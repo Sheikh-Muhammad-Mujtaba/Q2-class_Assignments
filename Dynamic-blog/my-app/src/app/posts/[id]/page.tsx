@@ -25,11 +25,38 @@ interface PostData {
   tags: string[];
 }
 
+interface Comment {
+  id: number;
+  text: string;
+  user: string;
+}
+
 export default function Post() {
   const router = useRouter();
   const { id } = useParams();
   const [postData, setPostData] = useState<PostData | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [comments, setComments] = useState<Comment[]>([]);
+  const [newComment, setNewComment] = useState<string>("");
+
+  useEffect(() => {
+    const savedComments = localStorage.getItem(`comments-${id}`);
+    if (savedComments) {
+      setComments(JSON.parse(savedComments));
+    }
+  }, [id]);
+
+  const handleAddComment = () => {
+    const comment: Comment = {
+      id: Date.now(),
+      text: newComment,
+      user: "Anonymous",
+    };
+    const updatedComments = [...comments, comment];
+    setComments(updatedComments);
+    localStorage.setItem(`comments-${id}`, JSON.stringify(updatedComments));
+    setNewComment("");
+  };
 
   useEffect(() => {
     if (!id) {
@@ -143,6 +170,32 @@ export default function Post() {
               );
             })}
           </div>
+        </div>
+        <div className="mt-8 w-full flex flex-col">
+          <h3 className="text-2xl font-semibold mb-4">Comments</h3>
+
+          <div className="mt-6">
+            <textarea
+              className="w-full p-3 text-black border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+              placeholder="Add a comment"
+            />
+            <button
+              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onClick={handleAddComment}
+            >
+              Submit
+            </button>
+          </div>
+          <ul className="space-y-4 mt-5">
+            {comments.map((comment) => (
+              <li key={comment.id} className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md">
+                <strong className="block text-lg font-medium">{comment.user}:</strong>
+                <p className="mt-1 text-gray-700">{comment.text}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>

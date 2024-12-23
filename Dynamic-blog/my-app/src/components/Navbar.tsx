@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="flex flex-row justify-between items-center px-0 py-[10px] gap-[14px] w-[84.444vw] h-[60px]">
       {/* Logo */}
       <h1 className="m-0 w-[131px] h-[24px] font-semibold text-[20px] leading-[24px] text-[#1A1A1A] dark:text-white">
-        Your Name
+        Dynamic Blog Site
       </h1>
 
       {/* Hamburger Button (Visible on small screens) */}

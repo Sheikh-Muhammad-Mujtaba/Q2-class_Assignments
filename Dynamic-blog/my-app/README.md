@@ -8,6 +8,13 @@ This is a simple blog application built with Next.js. It features dynamic routin
 - Dynamic routing for individual blog posts
 - Custom layout with header and footer
 - Global styles for consistent design
+- Comments section for each blog post
+
+## Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS 
 
 ## Getting Started
 
@@ -15,12 +22,12 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
    ```
-   git clone https://github.com/yourusername/my-nextjs-blog.git
+   git clone https://github.com/Sheikh-Muhammad-Mujtaba/Q2-class_Assignments/tree/main/Dynamic-blog/my-app.git
    ```
 
 2. **Navigate to the project directory:**
    ```
-   cd my-nextjs-blog
+   cd my-app
    ```
 
 3. **Install dependencies:**
@@ -38,26 +45,3 @@ To get started with this project, follow these steps:
    http://localhost:3000
    ```
 
-## Project Structure
-
-```
-my-nextjs-blog
-├── pages
-│   ├── index.tsx        # Homepage
-│   ├── _app.tsx         # Custom App component
-│   ├── blog
-│   │   └── [slug].tsx   # Dynamic blog post page
-├── components
-│   └── Layout.tsx       # Layout component
-├── public
-│   └── favicon.ico      # Favicon
-├── styles
-│   └── globals.css      # Global styles
-├── package.json         # NPM configuration
-├── tsconfig.json        # TypeScript configuration
-└── README.md            # Project documentation
-```
-
-## License
-
-This project is licensed under the MIT License.

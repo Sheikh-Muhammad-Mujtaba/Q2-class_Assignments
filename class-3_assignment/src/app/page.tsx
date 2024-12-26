@@ -1,8 +1,6 @@
 import React from "react";
-import Header from "@/app/components/Nav_bar";
 import ContactSection from './components/Contact';
 import AboutSection from "./components/About_Section";
-import Footer from './components/Footer';
 import SkillSection from "./components/Skill_Section";
 import Image from 'next/image';
 import PortfolioSection from "./components/Projects";
@@ -10,7 +8,6 @@ import PortfolioSection from "./components/Projects";
 export default function Home() {
   return (
     <>
-      <header><Header /></header>
       <div className="container">
         <div className="image-container mt-8">
        
@@ -75,7 +72,6 @@ export default function Home() {
       <div>
         <ContactSection />
       </div>
-      <footer><Footer /></footer>
     </>
   );
 }

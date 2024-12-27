@@ -7,7 +7,7 @@ import Header from '@/components/Header'
  * Fetch video posts from Sanity
  */
 
-export const revalidate = 0;
+export const revalidate = 2;
 async function getVideoPosts() {
   // Adding cache-control headers to ensure the fetch doesn't cache the data
   return await sanityClient.fetch(`

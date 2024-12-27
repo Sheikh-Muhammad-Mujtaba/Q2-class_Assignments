@@ -1,74 +1,67 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@sanity/client'
-import { createReadStream } from 'fs'
-import fetch from 'node-fetch'
-import { writeFile } from 'fs/promises'
-import path from 'path'
-import os from 'os'
+import { NextRequest, NextResponse } from 'next/server';
+import { unlink, createReadStream } from 'fs';
+import { writeFile } from 'fs/promises';
+import path from 'path';
+import os from 'os';
+import FormData from 'form-data';
 
-// Initialize Sanity client
-const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  token: process.env.SANITY_API_TOKEN,
-  useCdn: false,
-  apiVersion: '2023-11-20',
-})
+const sanitizeFilename = (filename: string) => filename.replace(/[^a-zA-Z0-9._-]/g, '_');
+
+const uploadFileToSanity = async (filePath: string, fileName: string) => {
+  const form = new FormData();
+  form.append('file', createReadStream(filePath), fileName);
+
+  const response = await fetch(
+    `https://paaodj51.api.sanity.io/v2023-11-20/assets/files/production?filename=${encodeURIComponent(fileName)}`,
+    {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.SANITY_API_TOKEN}`,
+        ...form.getHeaders(),
+      },
+      body: form,
+    }
+  );
+
+  if (!response.ok) {
+    const errorBody = await response.text();
+    throw new Error(
+      `Failed to upload file: ${response.status} - ${response.statusText}\n${errorBody}`
+    );
+  }
+
+  return await response.json();
+};
 
 export const POST = async (req: NextRequest) => {
   try {
-    const formData = await req.formData()
-    const caption = formData.get('caption') as string
-    const userId = 'e93f3fb6-e3c3-4f5e-be10-55da3b76cfe6'
-    const videoFile = formData.get('video') as File
+    const formData = await req.formData();
+    const videoFile = formData.get('video') as File;
 
-    if (!videoFile || !videoFile.name || videoFile.size === 0) {
-      return NextResponse.json({ success: false, error: 'Invalid video file provided' }, { status: 400 })
+    if (!videoFile || videoFile.size === 0) {
+      throw new Error('Invalid or empty file provided.');
     }
 
-    if (!userId) {
-        return NextResponse.json({ success: false, error: 'Invalid user ID' }, { status: 400 });
-      }
-      
+    const tempFilePath = path.join(os.tmpdir(), sanitizeFilename(videoFile.name));
 
-    // Use dynamic temp directory
-    const tempDir = os.tmpdir()
-    const tempFilePath = path.join(tempDir, videoFile.name)
-    const buffer = Buffer.from(await videoFile.arrayBuffer())
+    const buffer = Buffer.from(await videoFile.arrayBuffer());
+    await writeFile(tempFilePath, buffer);
 
-    // Write file to the temp directory
-    await writeFile(tempFilePath, buffer)
+    try {
+      const result = await uploadFileToSanity(tempFilePath, videoFile.name);
 
-    // Fix for Node.js 18+ fetch
-    globalThis.fetch = fetch
-
-    // Upload video to Sanity
-    const asset = await sanityClient.assets.upload('file', createReadStream(tempFilePath), {
-        filename: videoFile.name,
-        fetch: (url, options) => fetch(url, { ...options, duplex: 'half' }),
+      return NextResponse.json({ success: true, result });
+    } finally {
+      unlink(tempFilePath, (err) => {
+        if (err) console.error(`Failed to delete temp file: ${err.message}`);
       });
-      
+    }
+  } catch (error: any) {
+    console.error('File upload error:', error);
 
-    // Create video document in Sanity
-    const newPost = await sanityClient.create({
-      _type: 'videoPost',
-      caption,
-      video: {
-        _type: 'file',
-        asset: { _ref: asset._id },
-      },
-      author: {
-        _type: 'reference',
-        _ref: userId, 
-      },
-      likes: 0,
-      shares: 0,
-      createdAt: new Date().toISOString(),
-    })
-
-    return NextResponse.json({ success: true, data: newPost })
-  } catch (error) {
-    console.error('Error uploading video:', error)
-    return NextResponse.json({ success: false, error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: error.message || 'Internal server error' },
+      { status: 500 }
+    );
   }
-}
+};

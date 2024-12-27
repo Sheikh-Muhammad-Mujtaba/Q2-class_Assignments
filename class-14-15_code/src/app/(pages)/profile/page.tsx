@@ -7,7 +7,7 @@ interface ProfileData {
   _id: string
   username: string
   bio: string
-  avatar: { asset: { _ref: string } }
+  avatar: string | null
 }
 
 // Create a builder for resolving Sanity image URLs
@@ -18,12 +18,11 @@ const resolveSanityImageUrl = (ref: string) => builder.image(ref).url()
 async function getUserProfile(): Promise<ProfileData | null> {
   const query = `
     *[_type == "user"][0] {
-  _id,
-  username,
-  bio,
-  "avatar": avatar.asset->url,
-}
-
+      _id,
+      username,
+      bio,
+      "avatar": avatar.asset._ref
+    }
   `
   const profile = await sanityClient.fetch(query)
   return profile
@@ -45,8 +44,9 @@ export default async function ProfilePage() {
     )
   }
 
-  // Resolve the avatar URL
-  const avatarUrl = resolveSanityImageUrl(profile.avatar)
+  const avatarUrl = profile.avatar
+    ? resolveSanityImageUrl(profile.avatar)
+    : '/default-avatar.png';
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4">

@@ -92,9 +92,9 @@ body {
 .image-container {
   position: absolute;
   height: 140%;
-  right: -20%;
+  right: -60%;
   top: -20%;
-  width: 70%;
+  width: 100%/*70%*/;
   transform: rotate(9.67deg);
   background: #000000;
   overflow: hidden;
@@ -114,7 +114,7 @@ body {
 
 
 /* Responsive Design */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
   /* Full-Height Image Container */
   .image-container {
     position: absolute;
@@ -189,10 +189,11 @@ body {
   /* Icons */
   .icons {
     position: absolute;
-    top: clamp(60%, 65vw, 75%);
-    left: clamp(40%, 45vw, 50%);
+    top: clamp(70%, 65vw, 75%);
+    left: clamp(40%, 45vw, 60%);
     transform: rotate(102.12deg);
     display: flex;
+    gap: 0.1rem;
     flex-direction: column;
   }
 
@@ -238,8 +239,8 @@ body {
   }
 
   .icons {
-    top: clamp(58%, 65vw, 65%);
-    left: clamp(30%, 35vw, 40%);
+    top: clamp(63%, 65vw, 65%);
+    left: clamp(30%, 35vw, 50%);
   }
 
   .icon {
@@ -260,7 +261,34 @@ body {
   }
 
   .icons {
-    top: clamp(50%, 60vw, 70%);
+    top: clamp(57%, 60vw, 70%);
     left: clamp(30%, 35vw, 40%);
   }
+}
+
+/* Custom gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

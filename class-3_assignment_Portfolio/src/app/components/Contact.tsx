@@ -26,7 +26,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="mb-10 mt-5">
+    <section id='contact' className="mb-10 mt-5">
       <div className="items-center text-center bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(26,_21,_21,_0)_0%,_rgba(1,_1,_1,_0.16)_100%),_#FFFFFF] mx-auto px-4 lg:px-8 py-8">
         <button className="w-[300px] h-[74px] sm:w-[250px] sm:h-[70px] lg:w-[300px] lg:h-[74px] border-[6px] border-solid border-[#000000] font-bold text-center mb-12 mt-12 text-black lg:text-4xl md:text-4xl text-3xl leading-[138.68%] hover:bg-gray-200">
           Contact{' '}
